@@ -29,3 +29,12 @@ const personas = [
   ];
   const ordenados = _.sortBy(personas, 'edad');
   console.log(ordenados);
+
+  const numerosRepetidos = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7];
+const unicos = _.uniq(numerosRepetidos);
+console.log(unicos);
+
+const n = 3;
+const elementos = ["a", "b", "c", "d", "e", "f", "g", "h"];
+const grupos = _.chunk(elementos, n);
+console.log(grupos);
