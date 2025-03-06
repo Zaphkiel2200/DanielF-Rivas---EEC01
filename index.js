@@ -1,4 +1,4 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
 const numeros = [1, 2, 3, 4, 5];
 const numerosInvertidos = _.reverse(numeros);
@@ -7,3 +7,8 @@ console.log(numerosInvertidos);
 const valores = [0, "Hola", false, 42, "", null, "Mundo", undefined, NaN, true];
 const valoresFiltrados = _.compact(valores);
 console.log(valoresFiltrados); 
+
+const array1 = [1, 2, 3];
+const array2 = [3, 4, 5];
+const union = _.union(array1, array2);
+console.log(union); // [1, 2, 3, 4, 5]
