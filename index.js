@@ -38,3 +38,27 @@ const n = 3;
 const elementos = ["a", "b", "c", "d", "e", "f", "g", "h"];
 const grupos = _.chunk(elementos, n);
 console.log(grupos);
+
+const persona = { nombre: "Carlos", apellido: "Pérez", edad: 28 };
+const nuevoObjeto = _.mapKeys(persona, (value, key) => key.toUpperCase());
+console.log(nuevoObjeto);
+
+const anidado = [1, [2, [3, [4, 5]]], 6];
+const plano = _.flattenDeep(anidado);
+console.log(plano);
+
+const lista1 = [1, 2, 3, 4, 5];
+const lista2 = [3, 4, 5, 6, 7];
+const lista3 = [5, 6, 7, 8, 9];
+const interseccion = _.intersection(lista1, lista2, lista3);
+console.log(interseccion);
+
+const clave = "curso";
+const estudiantes = [
+  { nombre: "Mario", curso: "Matemáticas" },
+  { nombre: "Lucía", curso: "Historia" },
+  { nombre: "Juan", curso: "Matemáticas" },
+  { nombre: "Elena", curso: "Historia" }
+];
+const agrupados = _.groupBy(estudiantes, clave);
+console.log(agrupados);
